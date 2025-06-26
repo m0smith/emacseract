@@ -1,0 +1,26 @@
+# Node dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VS Code build artifacts
+dist/
+out/
+*.vsix
+
+# Logs
+*.log
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# TypeScript metadata
+*.tsbuildinfo
+
+# Optional: esbuild output maps
+*.map

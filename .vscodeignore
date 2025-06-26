@@ -1,0 +1,16 @@
+# Exclude source code from packaged extension
+src/
+.vscode/
+*.ts
+*.map
+*.tsbuildinfo
+
+# Dev and build tools
+esbuild.config.js
+tsconfig.json
+node_modules/
+
+# Docs and local config
+README.md
+.gitignore
+.vscodeignore

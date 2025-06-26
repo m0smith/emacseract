@@ -1,0 +1,49 @@
+{
+    "name": "emacseract",
+    "displayName": "EMACSeract",
+    "description": "A collection of Emacs-style editing commands for VS Code, starting with zap-to-char.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.85.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:emacseract.zapToChar"
+    ],
+    "main": "./dist/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "emacseract.zapToChar",
+                "title": "Zap To Char (Emacs zap-to-char)"
+            },
+            {
+                "command": "emacseract.shrinkSpaces",
+                "title": "Shrink Surrounding Spaces to One (EMACS just-one-space)"
+            }
+
+        ],
+        "keybindings": [
+            {
+                "command": "emacseract.zapToChar",
+                "key": "alt+z",
+                "when": "editorTextFocus"
+            },
+           
+            {
+                "command": "emacseract.shrinkSpaces",
+                "key": "alt+space",
+                "when": "editorTextFocus"
+            }
+        ]
+    },
+    "scripts": {
+        "build": "node esbuild.config.js",
+        "watch": "esbuild --watch --sourcemap --bundle src/extension.ts --outfile=dist/extension.js --external:vscode"
+    },
+    "devDependencies": {
+        "esbuild": "^0.19.0"
+    }
+}
